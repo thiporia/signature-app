@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서명 만들기</title>
+</head>
+<body>
+  <div>
+    <div style="font-size:24px;padding:12px;margin-bottom:16px;">서명 만들기 😎</div>
+  </div>
+  <div id="div_signature" style="padding:12px"> 
+  <div class="sensEdContentAreaCls" data-id="sensEdContentArea" style="color:#000;line-height:1.5;font-size:10pt;font-family:돋움 !important;padding:0;margin:0;">
+    <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+      <tbody>
+        <tr>
+          <td>
+          <table align="left" background-color="#ffffff" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="margin:0;font-family:'맑은고딕',Malgun Gothic,AppleGothic,'나눔고딕',NanumGothic,'돋움',Dotum,sans-serif; border: 1px solid black;;" width="374">
+            <tbody>
+              <tr>
+                <td border="" valign="top" width="20"></td>
+                <td width="338">
+                <table border="0" cellpadding="0" cellspacing="0" style="font-family:돋움,Dotum,'Apple SD Gothic Neo','Apple SD 산돌고딕',sans-serif;color:#1e1e1e;word-break:break-all" width="338">
+                  <tbody>
+                    <tr>
+                      <td height="20" valign="top"></td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:16px;font-weight:bold" valign="top" width="338"><span id="span_kName">{한글}</span> <span id="span_eName">{영어}</span></td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:11px" valign="top" width="338">
+                        <p><span id="span_dept">{소속 / 직급}</span></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="16" valign="top"></td>
+                    </tr>
+                    <tr>
+                      <td valign="top" width="338">
+                      <table border="0" cellpadding="0" cellspacing="0" style="font-family:돋움,Dotum,'Apple SD Gothic Neo','Apple SD 산돌고딕',sans-serif;color:#1e1e1e;font-size:11px;word-break:break-all" width="338">
+                        <tbody>
+                          <tr>
+                            <td width="216">
+                            <table border="0" cellpadding="0" cellspacing="0" style="font-family:돋움,Dotum,'Apple SD Gothic Neo','Apple SD 산돌고딕',sans-serif;color:#1e1e1e;font-size:11px;word-break:break-all" width="216">
+                              <tbody>
+                                <tr>
+                                  <td style="font-size:11px;line-height:18px" valign="top" width="196">
+                                  <div style="border:none;margin:0px;padding:0px;width:20px;display:inline-block;">E</div>
+                                    <span id="span_email">{이메일}</span></td>
+                                </tr>
+                                <tr>
+                                  <td style="font-size:11px;line-height:18px" valign="top" width="196">
+                                  <div style="border:none;margin:0px;padding:0px;width:20px;display:inline-block;">M</div>
+                                    <span id="span_phone">{모바일}</span></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" height="16" valign="top" width="216"></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="font-weight:bold;font-size:11px" valign="top" width="216">주식회사 카카오헬스케어</td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="font-size:11px" valign="top" width="216">
+                                  <p>13529&nbsp;경기도 성남시 판교역로 166,<br />
+                                  카카오판교아지트 B동 5층</p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            </td>
+                            <td valign="bottom" width="122"><img id="signature_logo" src="./static/khc_logo.png" style="display:block;margin:0px;padding:0px;border:none;width:108px;" /></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="16" valign="top"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                </td>
+                <td width="16"></td>
+              </tr>
+            </tbody>
+          </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  
+  <div style="margin-top:32px;padding:12px;">
+    <input type="text" placeholder="이름 한글" id="kName"/>
+    <input type="text" placeholder="이름 영문" id="eName"/>
+    <input type="text" placeholder="소속 / 직급" id="dept"/>
+    <input type="text" placeholder="이메일" id="email"/>
+    <input type="text" placeholder="모바일" id="phone"/>
+    <div>
+      <div style="margin-left:8px;margin-top:12px">로고</div>
+      <select id="sel_logo">
+        <option value="khc">기본</option>
+        <option value="choonsik">춘식이</option>
+        <option value='ryan'>라이언</option>
+        <option value="con">콘</option>
+        <option value="muzi">무지</option>
+        <option value="prodo">프로도</option>
+        <option value="apeach">어피치</option>
+        <option value="neo">네오</option>
+      </select>
+  </div>
+  <div style="margin-top:32px">
+    <button style="width:100px;height:40px;" id="generate_signature">서명 생성하기</button>
+    <div style="margin-top:16px">
+      서명 생성하기를 클릭하시면 현재 기준 정보로 클립보드에 복사됩니다.
+      <br />
+      그대로 이메일 서명에 붙여넣으시면 됩니다.
+    </div>
+  </div>
+  <script type="text/javascript" src="./lib/jquery-3.6.3.js" defer></script>
+  <script type="text/javascript" src="main.js" defer></script>
+</body>
+</html>
