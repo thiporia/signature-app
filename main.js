@@ -29,7 +29,8 @@ $('#phone').on('change', (e) => {
 })
 
 const IMAGES = {
-  khc: './static/khc_logo.png',
+  khc:
+    'https://github.com/thiporia/signature-app/blob/main/static/khc_logo.png?raw=true',
   choonsik: 'https://t1.daumcdn.net/comis/mail/img_choonsik_2.png',
   ryan: 'https://t1.daumcdn.net/comis/mail/img_ryan_2.png',
   con: 'https://t1.daumcdn.net/comis/mail/img_con_2.png',
@@ -37,6 +38,8 @@ const IMAGES = {
   prodo: 'https://t1.daumcdn.net/comis/mail/img_prodo_2.png',
   apeach: 'https://t1.daumcdn.net/comis/mail/img_apeach_2.png',
   neo: 'https://t1.daumcdn.net/comis/mail/img_neo_2.png',
+  jayg: 'https://t1.daumcdn.net/comis/mail/img_jayg_2.png',
+  tube: 'https://t1.daumcdn.net/comis/mail/img_tube_2.png',
 }
 
 const setImage = (key) => {
@@ -55,4 +58,14 @@ $('#generate_signature').on('click', () => {
     // Alert the copied text
     alert('Copied the text: ' + copiedHTML)
   })
+})
+
+$('#search_address').on('click', () => {
+  new daum.Postcode({
+    oncomplete: function (data) {
+      console.log(data)
+      // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+      // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+    },
+  }).open()
 })
